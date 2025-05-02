@@ -11,22 +11,22 @@
     <form action="{{route('admin.penulis.tampil')}}" method="POST" enctype="multipart/form-data">
       @csrf
         <div class="mb-3">
-          <label  class="form-label"> buku</label>
-          <input type="text" class="form-control" name="buku"  id="buku" >
+          <label  class="form-label"> nama</label>
+          <input type="text" class="form-control" name="nama"  id="nama" >
 
         </div>
         <div class="mb-3">
-          <label  class="form-label">judul</label>
-          <input type="text" class="form-control" name="judul" id="judul">
+          <label  class="form-label">alamat</label>
+          <input type="text" class="form-control" name="alamat" id="alamat">
         </div>
         <div class="mb-3">
-          <label  class="form-label"> penulis</label>
-          <input type="text" class="form-control" name="penulis" id="penulis" >
+          <label  class="form-label"> status</label>
+          <input type="text" class="form-control" name="status" id="status" >
 
         </div>
         <div class="mb-3">
-          <label  class="form-label">terbit</label>
-          <input type="date" class="form-control" name="terbit" id="terbit">
+          <label  class="form-label">tanggal lahir</label>
+          <input type="date" class="form-control" name="tanggal_lahir" id="tanggal_lahit">
         </div>
         <button type="submit" >Submit</button>
       </form>

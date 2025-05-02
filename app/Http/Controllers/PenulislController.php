@@ -35,10 +35,10 @@ class PenulislController extends Controller
         $penulis = new penulis;   
     }
 
-    $penulis->buku=$request->get('buku');
-    $penulis->judul=$request->get('judul');
-    $penulis->penulis=$request->get('penulis');
-    $penulis->terbit=$request->get('terbit');
+    $penulis->nama=$request->get('nama');
+    $penulis->alamat=$request->get('alamat');
+    $penulis->status=$request->get('status');
+    $penulis->tanggal_lahir=$request->get('tanggal_lahir');
     $penulis->save();
     return redirect()->route('admin.penulis.tampil');
 }

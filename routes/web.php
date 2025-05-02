@@ -44,3 +44,6 @@ route::get('admin/terbit/edit/{id}',[App\Http\Controllers\TerbitlController::cla
 route::post('admin/terbit/tampil',[App\Http\Controllers\TerbitlController::class,'post'])->name('admin.terbit.post');
 route::get('/admin/terbit/tampil/delete/{id}',[App\Http\Controllers\TerbitlController::class,'delete']);
  
+route::get('databuku',[App\Http\Controllers\dataController::class,"data"])->name('data.info-buku.ttg-buku');
+route::get('datapenulis',[App\Http\Controllers\dataaController::class,"data"])->name('data.info-penulis.ttg-penulis');
+route::get('dataterbit',[App\Http\Controllers\dataaaController::class,"data"])->name('data.info-terbit.ttg-terbit');

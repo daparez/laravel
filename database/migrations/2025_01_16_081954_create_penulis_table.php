@@ -13,10 +13,10 @@ return new class extends Migration
     {
         Schema::create('penulis', function (Blueprint $table) {
             $table->id();
-            $table->text('buku');
-            $table->text('judul');
-            $table->text('penulis');
-            $table->date('terbit');
+            $table->text('nama');
+            $table->text('alamat');
+            $table->text('status');
+            $table->date('tanggal_lahir');
             $table->timestamps();
         });
     }

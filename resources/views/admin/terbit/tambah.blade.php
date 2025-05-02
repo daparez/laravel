@@ -3,30 +3,30 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>tambahkan buku</title>
+    <title>tambahkan penerbit</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   </head>
   <body>
-    <h1>tambahkan buku</h1>
+    <h1>tambahkan penerbit</h1>
     <form action="{{route('admin.terbit.tampil')}}" method="POST" enctype="multipart/form-data">
       @csrf
         <div class="mb-3">
-          <label  class="form-label"> buku</label>
-          <input type="text" class="form-control" name="buku"  id="buku" >
+          <label  class="form-label"> penerbit</label>
+          <input type="text" class="form-control" name="penerbit"  id="penerbit" >
 
         </div>
         <div class="mb-3">
-          <label  class="form-label">judul</label>
-          <input type="text" class="form-control" name="judul" id="judul">
+          <label  class="form-label">pemilik</label>
+          <input type="text" class="form-control" name="pemilik" id="pemilik">
         </div>
         <div class="mb-3">
-          <label  class="form-label"> penulis</label>
-          <input type="text" class="form-control" name="penulis" id="penulis" >
+          <label  class="form-label"> alamat</label>
+          <input type="text" class="form-control" name="alamatt" id="alamatt" >
 
         </div>
         <div class="mb-3">
-          <label  class="form-label">terbit</label>
-          <input type="date" class="form-control" name="terbit" id="terbit">
+          <label  class="form-label">tanggal di bangun</label>
+          <input type="date" class="form-control" name="tanggal_di_bangun" id="tanggal_di_bangun">
         </div>
         <button type="submit" >Submit</button>
       </form>

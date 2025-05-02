@@ -34,10 +34,10 @@ class TerbitlController extends Controller
         $terbit = new terbit;   
     }
 
-    $terbit->buku=$request->get('buku');
-    $terbit->judul=$request->get('judul');
-    $terbit->penulis=$request->get('penulis');
-    $terbit->terbit=$request->get('terbit');
+    $terbit->penerbit=$request->get('penerbit');
+    $terbit->pemilik=$request->get('pemilik');
+    $terbit->alamatt=$request->get('alamatt');
+    $terbit->tanggal_di_bangun=$request->get('tanggal_di_bangun');
     $terbit->save();
     return redirect()->route('admin.terbit.tampil');
 }

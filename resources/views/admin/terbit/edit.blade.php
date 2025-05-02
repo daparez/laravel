@@ -11,22 +11,22 @@
       @csrf
       <input type="hidden" name="id" value="{{$terbit->id}}">
         <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label"> buku</label>
-          <input type="text" class="form-control" name="buku" id="buku" value="{{$terbit->buku}}" aria-describedby="buku">
+          <label for="exampleInputEmail1" class="form-label"> penerbit</label>
+          <input type="text" class="form-control" name="penerbit" id="penerbit" value="{{$terbit->penerbit}}" aria-describedby="penerbit">
 
         </div>
         <div class="mb-3">
-          <label for="exampleInputPassword1" class="form-label">judul</label>
-          <input type="text" class="form-control" name="judul" value="{{$terbit->judul}}" id="judul" aria-describedby="judul">
+          <label for="exampleInputPassword1" class="form-label">pemilik</label>
+          <input type="text" class="form-control" name="pemilik" value="{{$terbit->pemilik}}" id="pemilik" aria-describedby="pemilik">
         </div>
         <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label">penulis</label>
-          <input type="text" class="form-control" name="penulis" value="{{$terbit->penulis}}" id="penulis" aria-describedby="penulis">
+          <label for="exampleInputEmail1" class="form-label">alamat</label>
+          <input type="text" class="form-control" name="alamatt" value="{{$terbit->alamatt}}" id="alamatt" aria-describedby="alamatt">
 
         </div>
         <div class="mb-3">
-          <label for="exampleInputPassword1" class="form-label">terbit</label>
-          <input type="date" class="form-control" name="terbit" value="{{$terbit->terbit}}" id="terbit" aria-describedby="terbit">
+          <label for="exampleInputPassword1" class="form-label">tahun di bangun</label>
+          <input type="date" class="form-control" name="tanggal_di_bangun" value="{{$terbit->tanggal_di_bangun}}" id="tanggal_di_bangun" aria-describedby="tanggal_di_bangun">
         </div>
 
         <button type="submit" class="btn btn-primary">Submit</button>

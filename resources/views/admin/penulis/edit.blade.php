@@ -11,22 +11,22 @@
       @csrf
       <input type="hidden" name="id" value="{{$penulis->id}}">
         <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label"> buku</label>
-          <input type="text" class="form-control" name="buku" id="buku" value="{{$penulis->buku}}" aria-describedby="buku">
+          <label for="exampleInputEmail1" class="form-label"> nama</label>
+          <input type="text" class="form-control" name="nama" id="nama" value="{{$penulis->nama}}" aria-describedby="nama">
 
         </div>
         <div class="mb-3">
-          <label for="exampleInputPassword1" class="form-label">judul</label>
-          <input type="text" class="form-control" name="judul" value="{{$penulis->judul}}" id="judul" aria-describedby="judul">
+          <label for="exampleInputPassword1" class="form-label">alamat</label>
+          <input type="text" class="form-control" name="alamat" value="{{$penulis->alamat}}" id="alamat" aria-describedby="alamat">
         </div>
         <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label">penulis</label>
-          <input type="text" class="form-control" name="penulis" value="{{$penulis->penulis}}" id="penulis" aria-describedby="penulis">
+          <label for="exampleInputEmail1" class="form-label">status</label>
+          <input type="text" class="form-control" name="status" value="{{$penulis->status}}" id="penulis" aria-describedby="status">
 
         </div>
         <div class="mb-3">
-          <label for="exampleInputPassword1" class="form-label">terbit</label>
-          <input type="date" class="form-control" name="terbit" value="{{$penulis->terbit}}" id="terbit" aria-describedby="terbit">
+          <label for="exampleInputPassword1" class="form-label">tanggal lahir</label>
+          <input type="date" class="form-control" name="tanggal_lahir" value="{{$penulis->tanggal_lahir}}" id="tanggal_lahit" aria-describedby="tanggal_lahir">
         </div>
 
         <button type="submit" class="btn btn-primary">Submit</button>

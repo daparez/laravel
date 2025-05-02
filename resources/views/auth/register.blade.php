@@ -5,48 +5,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Sign Up Form by Colorlib</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
     <!-- Font Icon -->
-    <link rel="stylesheet" href="{{ asset('/regis-frondend/fonts/material-icon/css/material-design-iconic-font.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('regis-frondend/fonts/material-icon/css/material-design-iconic-font.min.css') }}">
 
     <!-- Main css -->
-    <link rel="stylesheet" href="{{ asset('/regis-frondend/css/style.css')}}">
+    <link rel="stylesheet" href="{{ asset('regis-frondend/css/style.css') }}">
 </head>
 <body>
 
-    <div class="main">
+    <form method="POST" action="{{ route('register') }}">
+        @csrf
+        <div class="main">
 
-        <div class="container">
-            <div class="signup-content">
-                <form method="POST" id="signup-form" class="signup-form">
-                    <h2>Sign up </h2>
-                    <p class="desc">to get discount 10% when pre - order <span>“Batman Beyond”</span></p>
-                    <div class="form-group">
-                        <input type="text" class="form-input" name="name" id="name" placeholder="Your Name"/>
+            <section class="signup">
+                <div class="container">
+                    <div class="signup-content">
+                        <h2 class="form-title">Create account</h2>
+
+                        <div class="form-group">
+                            <input placeholder="Nama" class="form-input block mt-1 w-full" id="name" type="text" name="name" value="{{ old('name') }}" required autofocus autocomplete="name"/>
+                            @error('name')
+                                <div class="text-danger mt-2">{{ $message }}</div>
+                            @enderror
+                        </div>
+
+                        <div class="form-group">
+                            <input placeholder="Email" class="form-input block mt-1 w-full" id="email" type="email" name="email" value="{{ old('email') }}" required autocomplete="username"/>
+                            @error('email')
+                                <div class="text-danger mt-2">{{ $message }}</div>
+                            @enderror
+                        </div>
+
+                        <div class="form-group">
+                            <input placeholder="Password" class="form-input block mt-1 w-full" type="password" name="password" id="password" required autocomplete="new-password"/>
+                            @error('password')
+                                <div class="text-danger mt-2">{{ $message }}</div>
+                            @enderror
+                        </div>
+
+                        <div class="form-group">
+                            <input placeholder="Repeat your password" class="form-input block mt-1 w-full" type="password" name="password_confirmation" id="password_confirmation" required/>
+                            @error('password_confirmation')
+                                <div class="text-danger mt-2">{{ $message }}</div>
+                            @enderror
+                        </div>
+
+                        <div class="flex items-center justify-end mt-4">
+                            <a class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800" href="{{ route('login') }}">
+                                {{ __('Already registered?') }}
+                            </a>
+
+                            <button type="submit" class="btn btn-primary ms-4">
+                                {{ __('Register') }}
+                            </button>
+                        </div>
+
                     </div>
-                    <div class="form-group">
-                        <input type="email" class="form-input" name="email" id="email" placeholder="Email"/>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" class="form-input" name="password" id="password" placeholder="Password"/>
-                        <span toggle="#password" class="zmdi zmdi-eye field-icon toggle-password"></span>
-                    </div>
-                    <div class="form-group">
-                        <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
-                        <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all statements in  <a href="#" class="term-service">Terms of service</a></label>
-                    </div>
-                    <div class="form-group">
-                        <input type="submit" name="submit" id="submit" class="form-submit submit" value="Sign up"/>
-                        <a href="#" class="submit-link submit">Sign in</a>
-                    </div>
-                </form>
-            </div>
+                </div>
+            </section>
+
         </div>
 
-    </div>
+    </form>
 
     <!-- JS -->
-    <script src="{{ asset('/regis-frondend/vendor/jquery/jquery.min.js')}}"></script>
-    <script src="{{ asset('/regis-frondend/js/main.js')}}"></script>
-</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="{{ asset('regis-frondend/vendor/jquery/jquery.min.js') }}"></script>
+    <script src="{{ asset('regis-frondend/js/main.js') }}"></script>
+</body>
 </html>
